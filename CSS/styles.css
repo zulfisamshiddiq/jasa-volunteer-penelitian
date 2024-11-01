@@ -1,0 +1,643 @@
+:root {
+  --primary: #ffecc8;
+  --bgcard: #fefae0;
+  --bg: #ffeead;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  /* background-color: #FFD09B; */
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h3::after {
+  content: "";
+  border-bottom: 5px solid #c86b85;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px black;
+  border-radius: 5px;
+  padding: 1rem 1rem 3rem 1rem;
+  gap: 5rem;
+  width: 100%;
+  background-color: var(--bgcard);
+}
+
+.pembungkus-konten {
+  width: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.intro {
+}
+
+/* Navigasi */
+.logo {
+  width: 35%;
+  height: auto;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 3px 3px gray;
+  border-radius: 30% 8% 30%;
+}
+
+nav {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid #d6c0b3;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--bg);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1.2rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+ul li a:hover {
+  color: white;
+  background-color: #f09319;
+  padding: 0.5rem;
+  border-radius: 10%;
+  font-weight: bold;
+}
+
+ul li a::after {
+  content: "";
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+ul li a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.layar-logo {
+  width: 20%;
+}
+
+.tombol-menu {
+  color: black;
+  display: none;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+header video {
+  position: absolute;
+  object-fit: cover;
+  z-index: -2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+header .intro {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  z-index: 100;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+header .intro h1 {
+  padding: 0;
+  margin: 0;
+  font-family: "Sriracha", cursive;
+}
+
+header .intro p {
+  padding: 0;
+  margin: 0;
+  font-family: "Playwrite GB S", cursive;
+  font-style: italic;
+}
+
+header .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 50%;
+  z-index: -1;
+  background-color: black;
+}
+
+.card .fokus-penelitian-judul p,
+#volunteer p,
+.upaya-judul p {
+  font-family: monospace;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/* Fokus Penelitian */
+.card .fokus-penelitian-judul p {
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+.pembungkus-layar {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pembungkus-layar img {
+  width: 50%;
+  height: auto;
+}
+
+.sec-layar {
+  padding: 1rem;
+  max-width: 300px;
+  min-height: 300px;
+  box-shadow: 4px 4px 5px 5px #d6c0b3;
+  background-color: var(--primary);
+  gap: 1rem;
+}
+
+.sec-layar:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.pembungkus-layar h6 {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.sec-layar-inner p {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+/* Dokumentasi */
+.card .sec-dok {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card .sec-dok .menu-dok {
+  text-align: center;
+  width: 20%;
+}
+
+.card .sec-dok .menu-dok img {
+  width: 70%;
+}
+
+.doc-card-img {
+  border-radius: 10%;
+}
+
+.doc-card-img:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.quote {
+  text-align: center;
+  background: url(../asset/background-bromo.jpeg) no-repeat;
+  padding: 10rem;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  color: #fff;
+}
+
+.quote .layar-dalam p {
+  display: inline;
+  background: url(../asset/quote-icon.png) no-repeat;
+  padding: 3.8rem;
+}
+
+/* Personil Volunteer */
+#volunteer.card p {
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+article#volunteer .sec-vol img {
+  width: 100%;
+  height: auto;
+}
+
+.sec-vol {
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table th {
+  vertical-align: top;
+  width: 40%;
+}
+
+table td {
+  text-align: justify;
+}
+
+.tim {
+  width: 20%;
+  box-shadow: 4px 4px 5px 5px #d6c0b3;
+  padding: 0.5rem;
+  background-color: var(--primary);
+}
+
+.tim:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+/* Upaya Pelestarian */
+#upaya-pelestarian p {
+  text-align: center;
+  text-align: justify;
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+.upaya-text h5 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 2rem 1rem 0;
+}
+
+.upaya-text p {
+  padding: 1rem 1rem;
+  text-indent: 2rem;
+}
+
+section.sec-upaya img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+}
+
+.sec-upaya {
+  display: flex;
+  box-shadow: 4px 4px 5px 5px #d6c0b3;
+  width: 50%;
+}
+
+.sec-upaya:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.upaya-img,
+.upaya-text {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.upaya {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* ASIDE */
+aside {
+  flex: 1;
+  width: 25%;
+  height: 25%;
+  box-shadow: 1px 1px 3px 3px;
+  border-radius: 5px;
+  background-color: var(--bgcard);
+}
+
+aside .logo-aside img {
+  width: 50%;
+  height: 50%;
+}
+
+.logo-aside {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.text-aside {
+  text-align: center;
+}
+
+.text-aside p {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Kontak */
+#contact {
+  text-align: center;
+}
+
+.contact .row .map {
+  object-fit: cover;
+}
+
+.logo-instagram {
+  color: #e4405f;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo-instagram:hover {
+  color: #c13584;
+  transform: scale(1.1);
+}
+
+.logo-facebook {
+  color: #3b5998;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo-facebook:hover {
+  color: #576e9e;
+  transform: scale(1.1);
+}
+
+.logo-twitter {
+  color: #1da1f2;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo-twitter:hover {
+  color: #57b3ec;
+  transform: scale(1.1);
+}
+
+.logo-email {
+  color: #fbbc05;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo-email:hover {
+  color: #ffd453;
+  transform: scale(1.1);
+}
+
+.sosmed-wa .logo-whatsapp img {
+  width: 40px;
+}
+
+.sosmed-wa .logo-whatsapp img:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.nara-hubung {
+  background-color: #3c3d37;
+  padding: 1rem;
+  border-radius: 2%;
+  text-align: center;
+}
+
+.sosmed-wa {
+  margin: 0;
+  color: #fff;
+}
+
+.nara-hubung p {
+  margin: 0.5rem;
+}
+
+#contact {
+  padding-top: 1rem;
+}
+
+iframe {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer p {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--bg);
+}
+
+/* RESPONSIVE */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 1rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .tombol-menu {
+    display: block;
+    padding-top: 0.5rem;
+    padding-right: 4rem;
+  }
+
+  ul.hidden {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pembungkus-konten {
+    width: 100%;
+  }
+
+  .pembungkus-layar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sec-layar {
+    max-width: 600px;
+  }
+
+  .sec-layar .sec-layar-inner img {
+    width: 150px;
+    height: auto;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    padding-top: 15rem;
+  }
+
+  .sec-upaya h5 {
+    font-size: 2rem;
+  }
+
+  .sec-upaya p {
+    font-size: 1.3rem;
+  }
+
+  aside h4 {
+    font-size: 2rem;
+  }
+
+  aside figure figcaption {
+    font-size: 2rem;
+  }
+
+  .text-aside p {
+    font-size: 1.5rem;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .sec-layar-inner h6 {
+    font-size: 2rem;
+  }
+
+  .sec-layar-inner p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobil phone */
+@media (max-width: 560px) {
+  .sec-vol {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tim {
+    width: 200px;
+  }
+
+  .upaya-img {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .upaya-text h5,
+  .upaya-text p {
+    width: 300px;
+  }
+
+  .sec-upaya {
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .upaya {
+    flex-direction: column;
+    align-items: center;
+  }
+}
